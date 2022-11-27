@@ -1,21 +1,28 @@
 import './App.css';
 
 function App() {
+  
+  const users = ["Yashika","Nishant","Rupesh"]
+  
   return (
     <div className="App">
-      <Welcome n="Raj" pic="https://source.unsplash.com/random/profile-man"/>
-      <Welcome n="Nishant" pic="https://source.unsplash.com/random/profile-boy"/>
-      <Welcome n="Pooja" pic="https://source.unsplash.com/random/profile-girl"/>
+      {/* <Welcome n="Raj" pic="https://th.bing.com/th/id/OIP.ZgqwDEYzf2SZ9XniZH1YTwHaH9?w=186&h=200&c=7&r=0&o=5&pid=1.7"/>
+      <Welcome n="Nishant" pic="https://th.bing.com/th/id/OIP.StBOWlrvi-z4oqJ2pkze0AHaLc?w=115&h=180&c=7&r=0&o=5&pid=1.7"/>
+      <Welcome n="Pooja" pic="https://th.bing.com/th/id/OIP.3jnJbcHULatXuIdQsmVKowHaEK?w=289&h=180&c=7&r=0&o=5&pid=1.7"/> */}
+      
+      {users.map((nm) => <User name={nm}/>)}
+      
+      
     </div>
   );
 }
 
-function Welcome({n,pic}){
+function User({name}){
   return (
     <div>
-      <img src={pic} alt='dp'/>
+      {/* <img src={pic} alt='dp'/> */}
       <h1>
-        Hi , {n}
+        Hi , {name} 
       </h1>
     </div>
   )
