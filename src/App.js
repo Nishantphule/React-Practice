@@ -3,19 +3,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Welcome
-        name="Praveen"
-        pic="https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?w=2000"
-      />
+      <Welcome n="Raj" pic="https://source.unsplash.com/random/profile-man"/>
+      <Welcome n="Nishant" pic="https://source.unsplash.com/random/profile-boy"/>
+      <Welcome n="Pooja" pic="https://source.unsplash.com/random/profile-girl"/>
     </div>
   );
 }
 
-function Welcome({ pic, name }) {
+function Welcome({n,pic}){
   return (
-    <div className='card'>
-      <img className="user-pic" src={pic} alt={name} />
-      <h1>Hi, {name} 🎉🎉</h1>
+    <div>
+      <img src={pic} alt='dp'/>
+      <h1>
+        Hi , {n}
+      </h1>
     </div>
   )
 
