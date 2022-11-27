@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Welcome
+        name="Praveen"
+        pic="https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?w=2000"
+      />
     </div>
   );
+}
+
+function Welcome({ pic, name }) {
+  return (
+    <div className='card'>
+      <img className="user-pic" src={pic} alt={name} />
+      <h1>Hi, {name} 🎉🎉</h1>
+    </div>
+  )
+
 }
 
 export default App;
